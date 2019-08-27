@@ -1,0 +1,17 @@
+#AWS: Create new account, create new IAM user
+#Sign in to Cloud 9, create new instance
+#Install flutter:
+wget https://storage.googleapis.com/flutter_infra/releases/stable/linux/flutter_linux_v1.7.8+hotfix.4-stable.tar.xz
+tar xf flutter_linux_v1.7.8+hotfix.4-stable.tar.xz 
+#Install android SDK:
+wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+unzip -e sdk-tools-linux-4333796.zip
+#Set PATH and ANDROID_SDK_HOME in .bashrc:
+export PATH="$PATH:$HOME/tools/flutter/bin"
+export PATH="$PATH:$ANDROID_SDK_ROOT/tools/bin"
+#Install SDK licenses:
+sdkmanager --update
+sdkmanager "platforms;android-25" "build-tools;25.0.2" "extras;google;m2repository" "extras;android;m2repository"
+#Create app skeleton:
+flutter create simpledemo
+

@@ -1,0 +1,95 @@
+\documentclass[aspectratio=169,t]{beamer}
+\include{header}
+\subtitle{0: Allgemeines}
+\addbibresource{Bilder/0/imagesources.bib}
+\begin{document}
+
+\setbeamertemplate{footline}[first]
+\begin{frame}[noframenumbering]
+\titlepage
+\end{frame}
+
+\setbeamertemplate{footline}[presentationbody] 
+
+\begin{frame}{Vorstellung}
+ \begin{itemize}
+     \item<2-> Kurz zu mir
+     \only<2-4>{
+      \begin{itemize}
+        \item<2-4> Kontakt: Piotr.Dabrowski@posteo.de - gerne nutzen!
+        \item<3-4> Geboren 1981 in Warschau
+        \item<3-4> Studium der Biotechnologie \& Informatik an der TU Berlin
+        \item<3-4> Promotion über Auswertung von Hochdurchsatzdaten für Virus-Diagnostik
+        \item<3-4> Aufbau der bioinformatischen Analytik für das NGS-Labor des RKI
+        \item<3-4> Aufbau der Bioinformatics Core Facility am RKI
+        \item<4> Hang zu unkonventionellen Vorlesungsmethoden - Feedback erwünscht!
+      \end{itemize}
+     }
+     \item<5-> Der Todesstern \& (ausgewählte) andere Hilfsmittel
+     \item<9-> Sie \& Ihre Vorstellungen, Motivation und Vorkenntnisse
+     \only<10->{
+       \begin{itemize}
+           \item Tafelbild - coming to a git repo near you starting tomorrow!
+       \end{itemize}
+     }
+ \end{itemize}
+ \only<5-8>{
+  \begin{textblock}{15}(2,7)
+   \includegraphics[width=3cm]{Bilder/0/Todesstern.jpg}
+  \end{textblock}
+ }
+ \only<6-8>{
+  \begin{textblock}{15}(5.5,8.25)
+   \includegraphics[width=3cm]{Bilder/0/Tischnamensschild.png}
+  \end{textblock}
+ }
+ \only<7-8>{
+  \begin{textblock}{15}(9,7.5)
+   \includegraphics[angle=77,origin=c,height=2cm]{Bilder/0/Tischnamensschild.png}
+  \end{textblock}
+ }
+ \only<8>{
+  \begin{textblock}{15}(11.5,8)
+   \includegraphics[width=3cm]{Bilder/0/DSLR.png}
+  \end{textblock}
+ }
+\end{frame}
+
+\begin{frame}{Inhalt der Vorlesung}
+ Wie entwickelt man eine Gesundheitsapp? \uncover<2->{Am Beispiel eines Start-ups.}
+\end{frame}
+
+\begin{frame}{Inhalt der Übung}
+
+\end{frame}
+
+\begin{frame}{Benotung (?)}
+ \note<2>{Muss nicht ``fertig werden'', Idee und Herangehensweise ausschlaggebend.}
+ \begin{itemize}
+     \item<1-> Klausur: $40\%$
+     \item<1-> Übungsaufgaben: $40\%$
+     \item<1-> Ergebnisvorstellung: $20\%$
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Tests}
+ \begin{itemize}
+     \item Geschichte, TDD $\rightarrow$ BDD
+     \item Vor- und Nachteile von Testherangehensweisen
+     \item Warum ist Testen notwendig?
+ \end{itemize}
+\end{frame}
+
+\begin{frame}{Rest}
+ \begin{itemize}
+    \item CI/CD/fullstack testing
+    \item Empfehlung: Flutter, Jenkins. Keine Pflicht, andere Technologien können genutzt werden, wichtig ist das Ergebnis. Selber nicht viel Erfahrung mit mobile development, aber sehr viel mit Entwicklung allgemein. Wichtig: Flexibilität, technologien kommen und gehen, man muss flexibel bleiben und Tiefe aus einer Technologie in das schnelle Erlernen einer anderen transferieren können. Und: Je mehr Technologien mit Vor- und Nachteilen man kennt, um so besser kann man eine neue Technologie erlernen (Konzepte aus anderen erkennen) und ihre Schwächen und Stärken direkt einschätzen.
+ \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Bildquellen}
+\printbibliography
+\end{frame}
+
+\end{document}
