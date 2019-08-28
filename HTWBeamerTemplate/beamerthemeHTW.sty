@@ -1,0 +1,153 @@
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+
+
+% Settings
+
+\mode<presentation>
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
+
+\definecolor{HTWgreen}{rgb}{0.462, 0.725, 0} 
+% Settings
+\setbeamercolor*{title page header}{fg=black}
+\setbeamercolor*{author}{fg=black}
+\setbeamercolor*{date}{fg=black}
+\setbeamercolor*{subtitle}{fg=HTWgreen}
+\setbeamercolor{caption name}{fg=HTWgreen}
+\setbeamercolor{bibliography entry note}{fg=black}
+\setbeamercolor{bibliography entry author}{fg=HTWgreen}
+\setbeamercolor{bibliography entry title}{fg=black}
+\setbeamercolor{bibliography entry location}{fg=black}
+\setbeamercolor{bibliography item}{fg=black}
+
+\setbeamerfont{author}{series=\mdseries,size={\fontsize{8}{10}}}
+\setbeamerfont{title}{series=\bfseries,size={\fontsize{16}{18}}}
+\setbeamerfont{subtitle}{series=\mdseries,size={\fontsize{16}{18}}}
+\setbeamerfont{footer}{series=\mdseries,size={\fontsize{7}{8}}}
+\setbeamerfont{caption}{size=\tiny}
+\setbeamerfont{bibliography entry author}{series=\mdseries}
+\setbeamerfont{bibliography entry title}{series=\mdseries,shape=\itshape}
+\setbeamerfont{bibliography entry location}{series=\mdseries}
+\setbeamerfont{bibliography entry note}{series=\mdseries}
+\setbeamerfont{bibliography item}{series=\mdseries}
+
+%\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+%  \fill[color=white] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+%  \fill[color=orange] (0,0) rectangle(2.95,1.9);
+%  \fill[color=blue!50!cyan!80] (3.05,0) rectangle(\the\paperwidth,1.9);
+  \ifnum\thepage>1\relax%
+   \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+   \fill[HTWgreen,opacity=1] (1.3,0.6) rectangle(0.925*\the\paperwidth,0);
+   \fi
+  \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{HTW}[1][]
+{ 
+    \vskip0.28cm%
+    \begin{beamercolorbox}[wd=15cm,leftskip=5.77cm,#1]{author}
+      \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+   \vskip0.5cm%
+    \begin{beamercolorbox}[wd=15cm,leftskip=5.75cm,#1]{title page header}
+      \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+     \vskip0.4cm%
+    \begin{beamercolorbox}[wd=15cm,leftskip=5.75cm,#1]{subtitle}
+      \usebeamerfont{subtitle}\insertsubtitle%
+    \end{beamercolorbox}
+     \vskip0.2cm%
+    \begin{beamercolorbox}[wd=15cm,leftskip=5.75cm,#1]{date}
+     \begin{textblock}{10}(0.46,14.15)
+      \usebeamerfont{author}\insertdate%
+     \end{textblock}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=15cm,leftskip=11.95cm,#1]{date}
+     \begin{textblock}{0.5}(0.46,14.05)
+      \includegraphics[width=2.7cm]{HTWLogoTitle.jpg}
+     \end{textblock}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=10cm,leftskip=0cm,#1]{date}
+     \begin{textblock}{0.5}(0,0)
+      \includegraphics[width=5.35cm,height=9cm,clip]{\inserttitlegraphic}
+     \end{textblock}
+    \end{beamercolorbox}
+  \vfill
+}
+
+% Frame title
+\defbeamertemplate*{frametitle}{HTW}[1][]
+{
+\vskip1cm%
+  \begin{beamercolorbox}[wd=\paperwidth,ht=1.2cm]{frametitle} 
+    \begin{textblock}{10}(1,2.2)
+     \usebeamerfont{title}\insertframetitle
+    \end{textblock}
+  \end{beamercolorbox}
+  \vspace{-0.5cm}
+}
+
+\defbeamertemplate*{footline}{presentationbody}[1][]{%
+    \begin{beamercolorbox}[wd=10cm,leftskip=13.7cm,#1]{footer}
+     \begin{textblock}{1.5}(0,15.25)
+      \includegraphics[width=0.8cm]{HTWLogoSlide.png}
+     \end{textblock}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=10cm,leftskip=3.9cm,#1]{footer}
+     \begin{textblock}{10}(0,15.3)
+       \usebeamerfont{footer}\textcolor{white}{\insertauthor}
+     \end{textblock}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=10cm,leftskip=1.5cm,#1]{footer}
+     \begin{textblock}{10}(0,15.3)
+       \usebeamerfont{footer}\textcolor{white}{\insertdate}
+     \end{textblock}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=10cm,leftskip=8.75cm,#1]{footer}
+     \begin{textblock}{20}(0,15.3)
+       \usebeamerfont{footer}\textcolor{white}{\inserttitle}
+     \end{textblock}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=10cm,leftskip=15.2cm,#1]{footer}
+     \begin{textblock}{1.5}(0,0.55)
+        \usebeamerfont{footer}\insertframenumber/\inserttotalframenumber
+     \end{textblock}
+    \end{beamercolorbox}
+}
+
+\defbeamertemplate*{footline}{first}[1][]{%
+}
+
+\setbeamertemplate{itemize item}{\textcolor{black}{$\bullet$}}
+\setbeamertemplate{itemize subitem}{\textcolor{HTWgreen}{$\bullet$}}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=true]  
+
+\mode
+<all>
+
+\usepackage[style=numeric]{biblatex}
+\usepackage[ngerman]{babel}
+\usepackage{csquotes}
+\usepackage{silence,lmodern}
+\WarningFilter{biblatex}{Patching footnotes failed}
+\usepackage{pgfpages}
+\setbeameroption{show notes on second screen}
+
+\renewcommand{\figurename}{Abbildung}
+\setlength\abovecaptionskip{-5pt}
+
+\renewcommand*{\bibfont}{\fontsize{6}{7}\selectfont}
+\setlength\bibitemsep{0.5\itemsep}
+\DefineBibliographyStrings{german}{% 
+urlseen = {aufgerufen am}, 
+}
