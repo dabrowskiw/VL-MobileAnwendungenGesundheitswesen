@@ -22,6 +22,8 @@
 \setbeamercolor{bibliography entry title}{fg=black}
 \setbeamercolor{bibliography entry location}{fg=black}
 \setbeamercolor{bibliography item}{fg=black}
+\setbeamercolor{footerwhite}{fg=white, bg=white}
+\setbeamercolor{block title}{fg=HTWgreen,bg=white}
 
 \setbeamerfont{author}{series=\mdseries,size={\fontsize{8}{10}}}
 \setbeamerfont{title}{series=\bfseries,size={\fontsize{16}{18}}}
@@ -33,16 +35,26 @@
 \setbeamerfont{bibliography entry location}{series=\mdseries}
 \setbeamerfont{bibliography entry note}{series=\mdseries}
 \setbeamerfont{bibliography item}{series=\mdseries}
+\setbeamerfont{block title}{series=\mdseries,size={\fontsize{14}{16}}}
 
 %\setbeamertemplate{caption}[numbered]
 \setbeamertemplate{bibliography item}{\insertbiblabel}
 
-\setbeamertemplate{background}{
-  \begin{tikzpicture}
+%\setbeamertemplate{background}{
+%  \begin{tikzpicture}
+%  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+%  \ifnum\thepage>1\relax%
+%   \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+%   \fill[HTWgreen,opacity=1] (1.3,0.6) rectangle(0.925*\the\paperwidth,0);
+%   \fi
+%  \end{tikzpicture}
+%}
+\defbeamertemplate*{background}{bgfirst}[1][]{
+}
+
+\defbeamertemplate*{background}{bgbody}[1][]{
+    \begin{tikzpicture}
   \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
-%  \fill[color=white] (0,0) rectangle (\the\paperwidth,\the\paperheight);
-%  \fill[color=orange] (0,0) rectangle(2.95,1.9);
-%  \fill[color=blue!50!cyan!80] (3.05,0) rectangle(\the\paperwidth,1.9);
   \ifnum\thepage>1\relax%
    \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
    \fill[HTWgreen,opacity=1] (1.3,0.6) rectangle(0.925*\the\paperwidth,0);
@@ -73,7 +85,7 @@
     \end{beamercolorbox}
     \begin{beamercolorbox}[wd=15cm,leftskip=11.95cm,#1]{date}
      \begin{textblock}{0.5}(0.46,14.05)
-      \includegraphics[width=2.7cm]{HTWLogoTitle.jpg}
+      \includegraphics[width=2.7cm]{HTWBeamerTemplate/HTWLogoTitle.jpg}
      \end{textblock}
     \end{beamercolorbox}
     \begin{beamercolorbox}[wd=10cm,leftskip=0cm,#1]{date}
@@ -99,7 +111,7 @@
 \defbeamertemplate*{footline}{presentationbody}[1][]{%
     \begin{beamercolorbox}[wd=10cm,leftskip=13.7cm,#1]{footer}
      \begin{textblock}{1.5}(0,15.25)
-      \includegraphics[width=0.8cm]{HTWLogoSlide.png}
+      \includegraphics[width=0.8cm]{HTWBeamerTemplate/HTWLogoSlide.png}
      \end{textblock}
     \end{beamercolorbox}
     \begin{beamercolorbox}[wd=10cm,leftskip=3.9cm,#1]{footer}
