@@ -33,7 +33,7 @@
      \item<9-> Sie \& Ihre Vorstellungen, Motivation und Vorkenntnisse
      \only<10->{
        \begin{itemize}
-           \item Tafelbild - coming to a git repo near you starting tomorrow!
+           \item Kommt gleich!
        \end{itemize}
      }
  \end{itemize}
@@ -150,25 +150,6 @@ Entwicklung einer mobilen medizinischen Applikation.
     \end{definition}}
 \end{frame}
 
-
-\begin{frame}{Ihre Vorstellungen}
-    \note<1>{
-         Gruppenarbeit:
-      \begin{itemize}
-          \item Informatik=Datenverarbeitung
-          \item Gesundheitsinformatik=Datenverarbeitung im Gesundheitswesen
-          \item Frage: Patient kommt mit Tuberkulose (Gruppe A) oder Krebs (Gruppe B) in's Krankenhaus. Welche Einrichtungen könnten beteiligt sein (direkt oder indirekt), wo werden Patientendaten verarbeitet (personenbezogen/anonym/statistisch)?
-          \item Gruppengröße: 1 Reihe
-          \item Zeit: 10 Minuten
-      \end{itemize}
-     }
-     \only<2->{
-       \begin{itemize}
-           \item Tafelbild - coming to a git repo near you soon!
-       \end{itemize}
-    }
-\end{frame}
-
 \begin{frame}{Akteure im Gesundheitssystem (Überblick)}
    \begin{figure}[h!]
     \includegraphics[height=5.5cm]{Bilder/Gesundheitssystem.pdf}
@@ -262,6 +243,60 @@ Entwicklung einer mobilen medizinischen Applikation.
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Ihre Vorstellung}
+    \note{
+        \begin{itemize}
+            \item Ziel: Entwicklung einer App im 5er-Team
+            \item Manche haben mehr, manche weniger technischen Background
+            \item Informationen, um ausgewogene Teams zu erstellen
+        \end{itemize}
+        Zeit: 10 Minuten. \textbf{Wenn fertig, Namensschild auf Bildschirm!}
+    }
+    \only<2->{
+        Kurzprofil:
+        \begin{itemize}
+            \item Name
+            \item Bisherige Erfahrung (Sprachen, Projekte etc.) in:
+            \begin{itemize}
+                \item Programmierung
+                \item App-Entwicklung
+                \item (UI-)Design
+            \end{itemize}
+            \item Relevante Interessen, idealerweise mit erster App-Idee
+        \end{itemize}
+    }
+    \only<3->{Vorstellung: 2 Minuten + Profilbogen}
+\end{frame}
+
+\begin{frame}{Hausaufgabe!}
+    Gruppenfindung\only<2->{... oder zumindest schon mal Gedanken machen. }
+    \only<3->{
+        \begin{itemize}
+            \item Auf ausgewogene Teams achten!
+            \item Bei Teilteams: Welche Kompetenzen brauchen wir noch?
+            \item Erste Ideenabstimmung zum Thema der App
+        \end{itemize}
+    }
+    \only<4->{Nächste Woche ist noch Zeit zum Finalisieren.}
+\end{frame}
+
+%\begin{frame}{App-Ideen}
+%In der Woche drauf!
+%\end{frame}
+
+\stepcounter{slidesection}
+\setbeamertemplate{background}[bgfirst]
+\setbeamertemplate{footline}[first]
+\subtitle{\theslidesection: Technische Grundlagen}
+\titlegraphic{Bilder/logo2.png}
+\begin{frame}[noframenumbering]
+    \titlepage
+    \begin{textblock}{10}(4.75,15)
+        \cite{ProgrammingLogo}
+    \end{textblock}
+\end{frame}
+\setbeamertemplate{footline}[presentationbody] 
+\setbeamertemplate{background}[bgbody]
 
 \begin{frame}{Flutter}
     \note{
@@ -275,9 +310,10 @@ Entwicklung einer mobilen medizinischen Applikation.
                 \item Entwickler: Einer? Mehrere? Community oder Spaltungen? Aktivität der Entwicklung? (wikipedia)
                 \item Anzahl an reifen Projekten in Sprache (flutter.dev)
                 \item Bekannte Schwachstellen und Reaktionen (exploit-db.com, cve.mitre.org etc), konkretes Beispiel: www.cvedetails.com, Oracle (Page 10), Java, Metasploit modules, CVE-2012-4681 Java 7 Applet Remote Code Execution. Google: Page 12. Dart: Dart TCP
-                \item Geeignetheit der Features für Problem (bsp. R ist super für Statistik, aber katastrophale String-Verarbeitung. Shells für Systemautomation, aber nicht für komplexe Datenverarbeitung. PHP für Webentwicklung, aber nicht für Kommandozeilentools)
+                \item Geeignetheit der Features für Problem (bsp. R, shell, PHP)
                 \item Verfügbarkeit von relevanten Bibliotheken (pub.dev, chart, flchart)
                 \item Verfügbarkeit aktueller Entwicklungstools
+                \item Lizenz: Vorhanden? Falls ja, Bedingungen, bsp. GPL vs. LGPL. BSD: Redist license!
             \end{itemize}
         }
     }
@@ -289,7 +325,8 @@ Entwicklung einer mobilen medizinischen Applikation.
             \item[\only<4-6>{\textbullet}\only<7->{\checkmark}] Vorhandensein reifer Produkte
             \item[\only<4-7>{\textbullet}\only<8->{\checkmark}] Sicherheit
             \item[\only<4-8>{\textbullet}\only<9->{\checkmark}] Relevante Bibliotheken und Entwicklungstools
-            \item[\only<4-9>{\textbullet}\only<10->{?}] Ausreichende ROI bei fehlenden Vorkenntnissen
+            \item[\only<4-9>{\textbullet}\only<10->{\checkmark}] Bekannte und nutzbare Lizenz
+            \item[\only<4-10>{\textbullet}\only<11->{?}] Ausreichende ROI bei fehlenden Vorkenntnissen
         \end{itemize}
     }
 \end{frame}
