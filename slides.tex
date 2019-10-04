@@ -5,8 +5,13 @@
 \begin{document}
 
 \setbeamertemplate{footline}[first]
+
+
 \begin{frame}[noframenumbering]
-\titlepage
+    \titlepage
+    \begin{textblock}{10}(4.75,15)
+        \cite{logo}
+    \end{textblock}
 \end{frame}
 
 \setbeamertemplate{footline}[presentationbody] 
@@ -524,8 +529,7 @@
     \note{
         \begin{itemize}
             \item Sehr altes Konzept, 1970er bei Xerox Palo Alto
-            \item Popularität durch Web-Entwicklung
-            \item Derzeit viele Frameworks, die MVC-Pattern implementieren
+            \item Popularität durch Web-Entwicklung, jetzt viele Frameworks, die MVC-Pattern implementieren
         \end{itemize}
         Vorteile:
         \begin{itemize}
@@ -561,20 +565,33 @@
 
 
 \begin{frame}{Live-Minimalbeispiel revisited}
-    Und jetzt das Gleiche nochmal als MVC!
-    \begin{itemize}
-        \item Werden Model, View, Control alle benötigt?
-        \item Eigene Entscheidung - aber:
+    Übung: Und jetzt das Gleiche nochmal als MVC!
+    \only<2->{
         \begin{itemize}
-            \item Warum wird was weggelassen?
-            \item Skaliert das? Welche Probleme könnte das bringen?
+            \item Werden Model, View, Control alle benötigt?
+            \item Eigene Entscheidung - aber:
+            \begin{itemize}
+                \item Warum wird was weggelassen?
+                \item Skaliert das? Welche Probleme könnte das bringen?
+            \end{itemize}
         \end{itemize}
-    \end{itemize}
+    }
 \end{frame}
 
 
 \begin{frame}[allowframebreaks]{Quellenangaben}
-\printbibliography
+    \printbibliography
+\end{frame}
+
+\begin{frame}{Lizenz}
+    \begin{center}
+        \includegraphics{Bilder/by.png}\\
+        Alle Inhalte außer dem HTW-Logo, für die keine Quelle angegeben ist, sind eigenes Material und unter CC-BY 4.0\\
+        \url{https://creativecommons.org/licenses/by/4.0/}\\
+        lizenziert.\\\vspace{0.5cm}
+        Sämtliche Nutzungs- und Verwertungsrechte für das Logo der HTW Berlin in allen hier verwendeten Formen liegen ausschließlich bei der HTW Berlin:\\
+        \url{https://corporatedesign.htw-berlin.de/logos/logo-htw-berlin/}
+    \end{center}
 \end{frame}
 
 \end{document}
