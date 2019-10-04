@@ -1,3 +1,6 @@
+Übung zu MPG: Eine Gesundheitsapp finden und bewerten, ob sie ein Medizinprodukt sein sollte oder nicht. Vorstellung: 2 Minuten/Person. 
+
+
 #AWS: Create new account, create new IAM user
 #Sign in to Cloud 9, create new instance
 #Install flutter:

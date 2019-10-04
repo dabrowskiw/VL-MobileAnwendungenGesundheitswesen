@@ -228,6 +228,7 @@ Entwicklung einer mobilen medizinischen Applikation.
       \item Benachrichtigung in Stufen, z.B. Angehörige, dann Pflegepersonal
       \item Erinnerung an Medikamente (Problem: Adhärenz!)
       \item Generell: Ortsunabhängige Pflege (zu Hause)
+      \item Therapieunterstützung: Z.B. Kommunikation bei Depression, Gefühlstagebuch
       \item <2-> Automatische Übertragung von Geräten zu zentralen Datenbanken, automatische Vorauswertungen von Bilddaten
       \item<2-> Standardisierung - großes Problem in Medizintechnik
       \item<3-> Abgleich verschriebener Medikamente mit gelber oder roter Liste
@@ -235,16 +236,42 @@ Entwicklung einer mobilen medizinischen Applikation.
   \end{itemize}}
   \begin{itemize}
       \item Ubquitous Computing: Sensorik und automatische Benachrichtigungen, insbesondere in der Pflege
-      \item<2-> Verbesserung der Technikintegration
-      \item<3-> Expertensysteme zur Behandlungsunterstützung
-      \item<4-> Dokumentationsunterstützung
-      \item<5-> Logistik
-      \item<6-> Allgemein: Entlastung und Effizienzsteigerung, um bei gleichem Personal mehr Zeit für die Patienten zu haben
+      \item Telemedizin, Therapieunterstützung
+      \item<3-> Verbesserung der Technikintegration
+      \item<4-> Expertensysteme zur Behandlungsunterstützung
+      \item<5-> Dokumentationsunterstützung
+      \item<6-> Logistik
+      \item<7-> Allgemein: Entlastung und Effizienzsteigerung, um bei gleichem Personal mehr Zeit für die Patienten zu haben
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Rahmenbedingungen}
+    \note{
+        Whiteboard-Aufgabe: Wann kann eine Gesundheits-App gefährlich sein? 
+        \textbf{Zeit: Max. 5 Minuten}, wenn Fertig: Namensschild auf Bildschirm.
+        \\KI: Großes Interesse, 
+    }
+    Kann von Apps eine Gefahr ausgehen?
+    \only<2->{
+        Einige Beispiele:
+        \begin{itemize}
+            \item Fehldiagnose, zu später Arztbesuch
+            \item<2-> ``29 Prozent der Deutschen sehr oder ziemlich an einem Service interessiert, der den möglichen Einfluss der aktuellen Ernährungsweise auf die künftige Gesundheit ermittelt'' \cite{InteresseKI} - zu hohes Vertrauen?
+            \item<2-> Falsche Haltung/Intensität bei Übungen
+            \item<3-> Abfluss persönlicher Daten: ``Gesundheits-Apps halten die datenschutzrechtlichen Anforderungen häufig nicht ein'' \cite{CHARISMABMG}
+            \item<4-> Folgen von Fehlfunktionen, z.B. Einnahme falscher Medikamente
+            \item<5-> Verlust von Körpergefühl, Verstärkung von Krankheitsängsten (Cyberchondrie als Weg zur Hypochondrie)
+        \end{itemize}
+    }
+\end{frame}
+
+\begin{frame}{MPG}
+    
 \end{frame}
 
 \begin{frame}{Ihre Vorstellung}
     \note{
+        Um das Ganze ein wenig aufzulockern...
         \begin{itemize}
             \item Ziel: Entwicklung einer App im 5er-Team
             \item Manche haben mehr, manche weniger technischen Background
@@ -306,6 +333,7 @@ Entwicklung einer mobilen medizinischen Applikation.
         }
         \only<3->{
             Mini-Whiteboard: Was ist wichtig bei der Entscheidung für eine Sprache für ein Projekt?
+            \textbf{Zeit: 5 Minuten}
             \begin{itemize}
                 \item Entwickler: Einer? Mehrere? Community oder Spaltungen? Aktivität der Entwicklung? (wikipedia)
                 \item Anzahl an reifen Projekten in Sprache (flutter.dev)
@@ -400,10 +428,29 @@ Entwicklung einer mobilen medizinischen Applikation.
 \end{frame}
 
 \begin{frame}{Live-Minimalbeispiel}
+    \begin{itemize}
+        \item Standardbeispiel Flutter: Startup-Namensgenerator
+        \item<2-> ...ist das gut umgesetzt? Skaliert das?
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{MVC-Pattern}
+    \begin{itemize}
+        \item Design-Pattern zur Aufgabentrennung
+    \end{itemize}
 \end{frame}
 
 
-\begin{frame}{Bildquellen}
+\begin{frame}{Live-Minimalbeispiel revisited}
+    Und jetzt das Gleiche nochmal als MVC!
+    \begin{itemize}
+        \item Werden Model, View, Control alle benötigt?
+        \item Eigene Entscheidung - aber bitte gut überlegt!
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]{Quellenangaben}
 \printbibliography
 \end{frame}
 
