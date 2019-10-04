@@ -513,7 +513,6 @@
     }
 \end{frame}
 
-
 \begin{frame}{Live-Minimalbeispiel}
     \begin{itemize}
         \item Standardbeispiel Flutter: Startup-Namensgenerator
@@ -522,9 +521,42 @@
 \end{frame}
 
 \begin{frame}{MVC-Pattern}
-    \begin{itemize}
-        \item Design-Pattern zur Aufgabentrennung
-    \end{itemize}
+    \note{
+        \begin{itemize}
+            \item Sehr altes Konzept, 1970er bei Xerox Palo Alto
+            \item Popularität durch Web-Entwicklung
+            \item Derzeit viele Frameworks, die MVC-Pattern implementieren
+        \end{itemize}
+        Vorteile:
+        \begin{itemize}
+            \item Einfachere Einführung von Änderungen, da Logik geclustert
+            \item Einfachere Aufgabenteilung im Team (schlanke APIs)
+            \item Umsetzung von GUIs für unterschiedliche Endgeräte mit gleichem MC
+        \end{itemize}
+        \textbf{Whiteboard-Aufgabe}: Was könnte ein Nachteil von MVC sein? \textbf{Zeit: 2 Minuten}
+        \begin{itemize}
+            \item Code-Duplikation, da teilweise logische Verschränkung
+            \item Schwer konsistent zu entscheiden was wo hin (was Logik, was Control?)
+            \item Boilerplate
+        \end{itemize}
+    }
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \begin{itemize}
+                \item Design-Pattern zur Aufgabentrennung
+                \item Model: Daten und Business-Logik
+                \item View: GUI
+                \item Control: User-Interaktion (und eventuell View-Auswahl)
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=0.5\textwidth]{Bilder/MVC.png}
+                \caption{Kommunikation im MVC-Pattern \cite{MVC}}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
 
@@ -532,7 +564,11 @@
     Und jetzt das Gleiche nochmal als MVC!
     \begin{itemize}
         \item Werden Model, View, Control alle benötigt?
-        \item Eigene Entscheidung - aber bitte gut überlegt!
+        \item Eigene Entscheidung - aber:
+        \begin{itemize}
+            \item Warum wird was weggelassen?
+            \item Skaliert das? Welche Probleme könnte das bringen?
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
