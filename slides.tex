@@ -18,7 +18,13 @@
 
 \begin{frame}{Vorstellung}
     \note<4->{
-        Erstes Mal Vorlesung, Background nicht in mobilen Applikationen\\Bitte um Geduld, Hinweise
+        Erstes Mal Vorlesung, Background nicht in mobilen Applikationen\\Bitte um Geduld, Hinweise\\
+        Whiteboard:
+        \begin{itemize}
+            \item Wer nicht aufgerufen werden will, nach der VL bei mir melden (stelle keine Fragen) oder X oben links bei Antwort
+            \item Strichliste: Nur für mich für Gleichmäßigkeit, nicht zensurrelevant
+            \item Spontanes, prägnantes, kohärentes Sprechen wichtig! Beispiel: Empfehlung an Politikerin
+        \end{itemize}
     }
     \begin{itemize}
         \item<2-> Kurz zu mir
@@ -31,6 +37,7 @@
                 \item<3-4> Promotion über Auswertung von Hochdurchsatzdaten für Virus-Diagnostik
                 \item<3-4> Aufbau der bioinformatischen Analytik für das NGS-Labor des RKI
                 \item<3-4> Aufbau der Bioinformatics Core Facility am RKI
+                \item<3-4> Leitung des Aufgabenbereichs zur Modernisierung der Haushaltsvollzugs-Software des Bundes
                 \item<4> Hang zu unkonventionellen Vorlesungsmethoden - Feedback erwünscht!
             \end{itemize}
         }
@@ -122,7 +129,7 @@
                 \item Emfpehlung: Story erzählen.
             \end{itemize}
         }
-        \item Abgabe Projektaufgabe (git Release mit allen Elementen) und Slides für Präsentation (Mail mit Anhang): 04.02.2019 12:15 (Eingang Mail + Release-Datum)
+        \item<5-> Abgabe Projektaufgabe (git Release mit allen Elementen) und Slides für Präsentation (Mail mit Anhang): 27.01.2019 12:15 (Eingang Mail + Release-Datum)
         \item<6-> Umgesetzte Verbesserungsvorschläge/Fehlerkorrekturen
         \only<7>{
             \begin{itemize}
@@ -174,19 +181,6 @@
     \begin{figure}[h!]
         \includegraphics[height=5.5cm, right]{Bilder/GesundheitssystemAkteureBund.pdf}
         \caption{Einige Interaktionen auf Bundesebene. Eigene Abbildung.}
-    \end{figure}
-\end{frame}
-
-\begin{frame}{Datenaustausch (Beispiel GKV)}
-    \note{
-        \begin{itemize}
-            \item Richtlinien für den Datenaustausch im Gesundheits- und Sozialwesen, 110 Seiten
-            \item Häufig im Einsatz: Mainframe, COBOL
-        \end{itemize}
-    }
-    \begin{figure}[h!]
-        \includegraphics[height=5.5cm, right]{Bilder/DatenfluesseGesundheitssystem.pdf}
-        \caption{Beispiele für Austausch personenbezogener Daten im Gesundheitssystem. Eigene Abbildung.}
     \end{figure}
 \end{frame}
 
@@ -253,11 +247,11 @@
   \begin{itemize}
       \item Ubquitous Computing: Sensorik und automatische Benachrichtigungen, insbesondere in der Pflege
       \item Telemedizin, Therapieunterstützung
-      \item<3-> Verbesserung der Technikintegration
-      \item<4-> Expertensysteme zur Behandlungsunterstützung
-      \item<5-> Dokumentationsunterstützung
-      \item<6-> Logistik
-      \item<7-> Allgemein: Entlastung und Effizienzsteigerung, um bei gleichem Personal mehr Zeit für die Patienten zu haben
+      \item<2-> Verbesserung der Technikintegration
+      \item<3-> Expertensysteme zur Behandlungsunterstützung
+      \item<4-> Dokumentationsunterstützung
+      \item<5-> Logistik
+      \item<6-> Allgemein: Entlastung und Effizienzsteigerung, um bei gleichem Personal mehr Zeit für die Patienten zu haben
   \end{itemize}
 \end{frame}
 
@@ -479,7 +473,7 @@
     \end{itemize}
 \end{frame}
 
-\begin{frame}{I: Zielgruppe finden}
+\begin{frame}{Zielgruppe finden}
     \begin{figure}
         \centering
         \includegraphics[width=0.7\textwidth]{Bilder/Krankheitstage.jpg}
@@ -487,7 +481,7 @@
     \end{figure}
 \end{frame}
 
-\begin{frame}{I: Zielgruppe finden}
+\begin{frame}{Zielgruppe finden}
     \note{
         \begin{itemize}
             \item Alkohol: $10\%$ der Arbeitnehmer risikant
@@ -502,9 +496,54 @@
         \item Suchtprobleme (Alkohol, Spiele, Rauchen): Laut DAK-Gesundheitsreport 2019 über $10\%$
         \item Wohlstandskrankheiten, demografischer Wandel
     \end{itemize}
-    \only<2->{
-        Nächster Schritt: Literaturscreening.
+\end{frame}
+
+\begin{frame}{Lösungsidee erarbeiten}
+    \note{
+        Was hilft? Wie kann man es mit Technologie unterstützen? Viele Ideen hatten schon andere Leute.
+        \\Kamera: Nicht unterschätzen, z.B. LFA-Analyse
+        \\Mikrofon: Z.B. Schnarchgeräusche
+        \\Sensoren: Nachteile extern:
+        \begin{itemize}
+            \item Müssen rumgetragen werden
+            \item Probleme mit Konnektivität, kaum Standards
+            \item Veraltern schnell
+            \item Teuer
+        \end{itemize}
     }
+    \noindent Erstens: Literaturrecherche!
+    \only<2->{\\\noindent Großer Mehrwert des Handys: Sensorik}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            \only<3->{
+                Intern:
+                \begin{itemize}
+                    \item Accelerometer
+                    \item Gyroskop
+                    \item Magnetometer
+                    \item GPS
+                    \item Näherungsschalter
+                    \item Barometer
+                    \item Umgebungslichtsensor
+                    \item Kamera, Mikrofon
+                \end{itemize}
+            }
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \only<4->{
+                Extern:
+                \begin{itemize}
+                    \item Herzfrequenz
+                    \item Temperatur
+                    \item Blutdruck
+                    \item Oximeter
+                    \item EMG
+                    \item Glucometer
+                    \item ...
+                \end{itemize}
+            }
+        \end{column}
+    \end{columns}
 \end{frame}
 
 \begin{frame}{Wann wird eine App erfolgreich?}
@@ -555,7 +594,43 @@
 \end{frame}
 
 \begin{frame}{Beispiel für erfolgreiche App}
-    
+    \note{
+        \begin{itemize}
+            \item Modell: Freie App, Geräteintegration etc. als Abo. Erstattbarkeit und Pakete durch Krankenkassen
+            \item Bottom-up
+            \item Mitfinanzierung durch staatliche Start-up-Fonds
+            \item 5 Jahre bis zum finanziellen Erfolg: ``Wir haben unser privates Geld, Zeit, in manchen Fällen sogar den Wohnort geopfert''
+        \end{itemize}
+    }
+    \begin{columns}
+        \begin{column}{0.6\textwidth}
+            \vspace{-0.7cm}
+            \begin{figure}
+                \begin{minipage}{0.33\textwidth}
+                    \includegraphics[width=\textwidth]{Bilder/mysugr1.png}
+                \end{minipage}%
+                \begin{minipage}{0.33\textwidth}
+                    \includegraphics[width=\textwidth]{Bilder/mysugr2.png}
+                \end{minipage}%
+                \begin{minipage}{0.33\textwidth}
+                    \includegraphics[width=\textwidth]{Bilder/mysugr3.png}
+                \end{minipage}
+                \vspace{0.1cm}
+                \caption{Screenshots der App mySugr \cite{mysugr}}
+            \end{figure}    
+        \end{column}
+        \begin{column}{0.4\textwidth}
+            \noindent mySugr: App für Diabetiker
+            \begin{itemize}
+                \item[2011] Ein Diabetiker will sein Diabetik-Tagebuch digital führen, hat das Handy immer dabei
+                \item[2012] Unternehmensgründung
+                \item<2->[2017] Kauf durch Roche. ``Über den Kaufpreis [...] herrscht Stillschweigen, von einer dreistelligen Millionensumme darf ausgegangen werden.'' \cite{mysugrverkauf}
+            \end{itemize}
+        \end{column}
+    \end{columns}
+    \begin{textblock}{15}(12.5,1)
+        \includegraphics[width=3cm]{Bilder/mysugrlogo.png}
+    \end{textblock}
 \end{frame}
 
 \begin{frame}{Teambildung: Vorstellung}
@@ -568,8 +643,10 @@
             \item Informationen, um ausgewogene Teams zu erstellen
         \end{itemize}
         Zeit: 10 Minuten. \textbf{Wenn fertig, Namensschild auf Bildschirm!}
-        \\\vspace{0.5cm}
+        \\
         Man glaubt gar nicht, wie häufig man sich kurz vorstellen muss - guten Eindruck machen ist wichtig, also üben!
+        \\
+        \textbf{Aufgabe für alle}: Notizen machen! Interessante Details (``Kann was was ich nicht kann'', ``Gute Idee'', ...) - mit wem wollen Sie zusammenarbeiten, wen ansprechen? Wen würden Sie einstellen, wenn Sie gerade ihr Startup gründen?
     }
     \only<2->{
         Kurzprofil:

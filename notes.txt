@@ -1,3 +1,9 @@
+Mitnehmen: 
+ * Ausdruck Teilnehmerliste
+ * Namensaufsteller
+ * Mini-Whiteboards
+ * 2 A4-Blätter
+
 Logo: 0.6
 
 Übung zu MPG: Eine Gesundheitsapp finden und bewerten, ob sie ein Medizinprodukt sein sollte oder nicht. Vorstellung: 2 Minuten/Person. 
