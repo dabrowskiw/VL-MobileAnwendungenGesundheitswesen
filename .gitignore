@@ -1,0 +1,6 @@
+slides.*
+!slides.tex
+header.*
+!header.tex
+.*
+!.gitignore
