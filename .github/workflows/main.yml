@@ -8,8 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v1
-    - name: Github Action for LaTeX
+    - name: Checkout repository
+      uses: actions/checkout@v1
+    - name: Build slides.tex to slides.pdf
       uses: xu-cheng/latex-action@1.0.5
       with:
         root_file: slides.tex
+    - name: Upload slides.pdf as artifact  
+      uses: actions/upload-artifact@master  
+      with:
+        name: slides.pdf
+        path: slides.pdf  
