@@ -1,0 +1,15 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Github Action for LaTeX
+      uses: xu-cheng/latex-action@1.0.5
+      with:
+        root_file: slides.tex
