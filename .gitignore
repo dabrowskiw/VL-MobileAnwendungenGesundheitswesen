@@ -4,3 +4,4 @@ header.*
 !header.tex
 .*
 !.gitignore
+*.log
