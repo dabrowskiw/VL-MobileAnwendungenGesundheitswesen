@@ -5,3 +5,4 @@ header.*
 .*
 !.gitignore
 *.log
+*.aux

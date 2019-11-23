@@ -355,7 +355,6 @@
         \item Fehldiagnosen durch fehlenden Sachverstand der Entwickler
         \item Fehlbenutzung, die z.B. zu Fehldiagnosen oder Fehlhaltungen bei Physitherapie-Übungen führt
         \item Klau von Daten oder Verkauf von Daten an Versicherungen, die z.B. Prämienerhöhungen daraus berechnen
-        \item 
     \end{itemize}    
 \end{frame}
 
@@ -759,28 +758,6 @@
     }
 \end{frame}
 
-\begin{frame}{Übung: git}
-    \note{
-        \begin{itemize}
-            \item Gitlab: Open Source (inhouse betreibbar), kostenfreie private Repositories, einfach konfigurierbares CI/CD. Aber grundsätzlich: Geschmackssache.
-            \item<3-> Branch-Anpassung
-            \item<5-> Abfrage: Ist .git-credentials ein Problem? Hinweisen auf häufige Wiederverwendung von Mail-Passwort-Kombinationen
-            \item<7-> \textbf{Diskutieren}: Passwort für key. Ist passwortloser key besser oder schlechter als .git-credentials? Hinweis auf keepass
-            \item<8-> \textbf{Diskutieren}: Ist git push --force nach reset auf gepushten commit  eine gute Idee?
-        \end{itemize}
-    }
-    \begin{itemize}
-        \item Erstellung eines gitlab-Accounts
-        \item<2-> Neues Projekt erstellen, README anpassen (online)
-        \item<3-> clone, README anpassen, commit
-        \item<4-> push... Aber wo geht es hin? git remote! Und was geht da hin? git branch
-        \item<5-> Credentials merken...
-        \item<6-> ...und gleich wieder löschen! 
-        \item<7-> Alternative: \href{https://docs.gitlab.com/ee/ssh/}{SSH-Key}. Dafür: clone über SSH (oder remote anpassen?)
-        \item<8-> Fehler rückgängig machen: git reset (vor und nach push)
-    \end{itemize}
-\end{frame}
-
 \begin{frame}{Flutter}
     \note{
         \only<1-2>{
@@ -811,66 +788,6 @@
             \item[\only<4-8>{\textbullet}\only<9->{\checkmark}] Relevante Bibliotheken und Entwicklungstools
             \item[\only<4-9>{\textbullet}\only<10->{\checkmark}] Bekannte und nutzbare Lizenz
             \item[\only<4-10>{\textbullet}\only<11->{?}] Ausreichende ROI bei fehlenden Vorkenntnissen
-        \end{itemize}
-    }
-\end{frame}
-
-\begin{frame}{Live-Minimalbeispiel}
-    \begin{itemize}
-        \item Standardbeispiel Flutter: Startup-Namensgenerator
-        \item<2-> ...ist das gut umgesetzt? Skaliert das?
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{MVC-Pattern}
-    \note{
-        \begin{itemize}
-            \item Sehr altes Konzept, 1970er bei Xerox Palo Alto
-            \item Popularität durch Web-Entwicklung, jetzt viele Frameworks, die MVC-Pattern implementieren
-        \end{itemize}
-        Vorteile:
-        \begin{itemize}
-            \item Einfachere Einführung von Änderungen, da Logik geclustert
-            \item Einfachere Aufgabenteilung im Team (schlanke APIs)
-            \item Umsetzung von GUIs für unterschiedliche Endgeräte mit gleichem MC
-        \end{itemize}
-        \textbf{Whiteboard-Aufgabe}: Was könnte ein Nachteil von MVC sein? \textbf{Zeit: 2 Minuten}
-        \begin{itemize}
-            \item Code-Duplikation, da teilweise logische Verschränkung
-            \item Schwer konsistent zu entscheiden was wo hin (was Logik, was Control?)
-            \item Boilerplate
-        \end{itemize}
-    }
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
-            \begin{itemize}
-                \item Design-Pattern zur Aufgabentrennung
-                \item Model: Daten und Business-Logik
-                \item View: GUI
-                \item Control: User-Interaktion (und eventuell View-Auswahl)
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{figure}
-                \centering
-                \includegraphics[width=0.5\textwidth]{Bilder/MVC.png}
-                \caption{Kommunikation im MVC-Pattern \cite{MVC}}
-            \end{figure}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-
-\begin{frame}{Live-Minimalbeispiel revisited}
-    Übung: Und jetzt das Gleiche nochmal als MVC!
-    \only<2->{
-        \begin{itemize}
-            \item Werden Model, View, Control alle benötigt?
-            \item Eigene Entscheidung - aber:
-            \begin{itemize}
-                \item Warum wird was weggelassen?
-                \item Skaliert das? Welche Probleme könnte das bringen?
-            \end{itemize}
         \end{itemize}
     }
 \end{frame}

@@ -7,3 +7,31 @@
 	\end{itemize}
 \end{frame}
 
+\begin{frame}{Vorgehen bei TDD}
+	\begin{enumerate}
+		\item Exakt einen fehlschlagenden Test schreiben
+		\item Den Test durch Code in der Testmethode bestehen lassen
+		\item Refaktorisieren in der Testklasse:
+		\begin{itemize}
+			\item Code aus (2) in neue Methode extrahieren
+			\item Code aus (2) in existierende Methode verschieben
+		\end{itemize}
+		\item Methoden nur in der Testklasse anlegen
+		\item Implementationsklassen nur als Ziel für Methoden aus (4) erstellen
+		\item Implementationsklassen nur durch Verschieben von Methoden aus (4) befüllen
+		\item Bei Bedarf refaktorisieren
+		\item Mit (1) weitermachen
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}{TDD-Aufgabe}
+	Implementation einer Tic-Tac-Toe-Klasse (in Paaren). Anforderungen:
+	\begin{itemize}
+		\item Das Spiel ist vorbei (unentschieden), wenn alle Felder vergeben sind
+		\item Das Spiel ist vorbei (gewonnen), wenn ein Spieler alle Felder in einer Reihe genommen hat
+		\item Das Spiel ist vorbei (gewonnen), wenn ein Spieler alle Felder in einer Spalte genommen hat
+		\item Das Spiel ist vorbei (gewonnen), wenn ein Spieler alle Felder auf einer Diagnoale genommen hat
+		\item Ein Spieler kann ein Feld nehmen, wenn es noch nicht vergeben ist
+		\item Spieler nehmen abwechselnd Felder, bis das Spiel vorbei ist
+	\end{itemize}
+\end{frame}
